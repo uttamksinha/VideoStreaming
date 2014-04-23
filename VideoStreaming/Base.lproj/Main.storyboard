@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fku-Xp-iar">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Player-->
+        <scene sceneID="ldf-Nq-s9v">
+            <objects>
+                <viewController storyboardIdentifier="VIDEOAVPlayer" id="Qd3-tc-fGB" customClass="VIDEOAVPlayer" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mOG-WH-sPn"/>
+                        <viewControllerLayoutGuide type="bottom" id="d4X-5Y-tJE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gdS-SU-Kte">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Myb-30-ANV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vmm-6S-y8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1644" y="414"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="VIDEOViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oLs-ii-NRM"/>
+                        <viewControllerLayoutGuide type="bottom" id="aY8-XZ-PGf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UkJ-oh-Ba3">
+                                <rect key="frame" x="0.0" y="65" width="320" height="369"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIDEO STREAMING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3e-oo-ffk">
+                                        <rect key="frame" x="20" y="20" width="280" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="1" green="0.2949850819" blue="0.34365814880000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kds-Vy-h7I">
+                                        <rect key="frame" x="85" y="83" width="147" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ovm-DX-AQn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="MPMoviePlayer">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="tt3-fM-HPg" kind="push" id="Wi3-Y6-N0m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1t-yT-0CW">
+                                        <rect key="frame" x="87" y="151" width="147" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="AVPlayer">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Qd3-tc-fGB" kind="push" id="Bwh-jZ-OIY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.11070545384501151" green="0.84345997204243839" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="F1t-yT-0CW" firstAttribute="top" secondItem="Kds-Vy-h7I" secondAttribute="bottom" constant="38" id="3NG-mh-eQZ"/>
+                                    <constraint firstItem="Kds-Vy-h7I" firstAttribute="leading" secondItem="UkJ-oh-Ba3" secondAttribute="leading" constant="85" id="BS9-cI-4bf"/>
+                                    <constraint firstItem="Kds-Vy-h7I" firstAttribute="top" secondItem="f3e-oo-ffk" secondAttribute="bottom" constant="42" id="GFg-Uh-HZp"/>
+                                    <constraint firstItem="f3e-oo-ffk" firstAttribute="centerX" secondItem="F1t-yT-0CW" secondAttribute="centerX" id="UdC-OG-vBA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kds-Vy-h7I" secondAttribute="trailing" constant="88" id="YA3-8x-IcJ"/>
+                                    <constraint firstItem="f3e-oo-ffk" firstAttribute="top" secondItem="UkJ-oh-Ba3" secondAttribute="top" constant="20" symbolic="YES" id="aGJ-tz-gSU"/>
+                                    <constraint firstItem="F1t-yT-0CW" firstAttribute="leading" secondItem="UkJ-oh-Ba3" secondAttribute="leading" constant="87" id="as2-2y-kbs"/>
+                                    <constraint firstItem="f3e-oo-ffk" firstAttribute="leading" secondItem="UkJ-oh-Ba3" secondAttribute="leading" constant="20" symbolic="YES" id="fE0-9y-K69"/>
+                                    <constraint firstItem="F1t-yT-0CW" firstAttribute="top" secondItem="UkJ-oh-Ba3" secondAttribute="top" constant="151" id="iNq-m4-qqT"/>
+                                    <constraint firstItem="F1t-yT-0CW" firstAttribute="centerX" secondItem="UkJ-oh-Ba3" secondAttribute="centerX" id="tsS-ha-VBA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UkJ-oh-Ba3" firstAttribute="top" secondItem="oLs-ii-NRM" secondAttribute="bottom" constant="1" id="421-gA-gXZ"/>
+                            <constraint firstItem="aY8-XZ-PGf" firstAttribute="top" secondItem="UkJ-oh-Ba3" secondAttribute="bottom" constant="134" id="cqw-3v-KtG"/>
+                            <constraint firstAttribute="trailing" secondItem="UkJ-oh-Ba3" secondAttribute="trailing" id="cun-3h-e34"/>
+                            <constraint firstItem="UkJ-oh-Ba3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="p9M-7C-8XK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fj0-GO-h42"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="100"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qop-lT-3er">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fku-Xp-iar" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N2V-q3-spb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="BfD-qc-ehb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OMN-vY-LUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="100"/>
+        </scene>
+        <!--Movie Player View Controller-->
+        <scene sceneID="RYc-GG-AEs">
+            <objects>
+                <viewController storyboardIdentifier="VIDEOMPMoviePlayerViewController" id="tt3-fM-HPg" customClass="VIDEOMPMoviePlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="quy-Xh-BjL"/>
+                        <viewControllerLayoutGuide type="bottom" id="qT3-cp-Asf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E6V-cl-OSn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dyT-DA-I62"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lV6-N6-maE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1644" y="-320"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
